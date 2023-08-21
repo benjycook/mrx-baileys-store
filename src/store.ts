@@ -21,7 +21,7 @@ export class Store {
   private readonly messageHandler;
   private readonly contactHandler;
 
-  constructor(sessionId: string, event: BaileysEventEmitter) {
+  constructor(sessionId: string, event: BaileysBufferableEventEmitter) {
     this.chatHandler = handlers.chatHandler(sessionId, event);
     this.messageHandler = handlers.messageHandler(sessionId, event);
     this.contactHandler = handlers.contactHandler(sessionId, event);
